@@ -3,6 +3,7 @@ using System.Windows.Forms;
 
 namespace lab9
 {
+    // Form for time interval input
     public partial class Form2 : Form
     {
         public double IntervalValue => (double)numericUpDown.Value;
@@ -13,7 +14,7 @@ namespace lab9
         private Label labelPrompt;
         public Form2(double currentTimeStep)
         {
-            this.Text = "Введіть інтервал часу";
+            this.Text = "Enter the time interval";
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             this.StartPosition = FormStartPosition.CenterParent;
             this.Width = 350;
@@ -23,7 +24,7 @@ namespace lab9
 
             labelPrompt = new Label()
             {
-                Text = "Величина збільшення часу",
+                Text = "The amount of time increase",
                 AutoSize = true,
                 Top = 20,
                 Left = 90
@@ -41,7 +42,7 @@ namespace lab9
 
             buttonOk = new Button()
             {
-                Text = "Ок",
+                Text = "Ok",
                 DialogResult = DialogResult.OK,
                 Top = 80,
                 Left = 180,
@@ -50,7 +51,7 @@ namespace lab9
 
             buttonCancel = new Button()
             {
-                Text = "Відміна",
+                Text = "Cancel",
                 DialogResult = DialogResult.Cancel,
                 Top = 80,
                 Left = 60,
