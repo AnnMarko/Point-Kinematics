@@ -362,7 +362,7 @@ namespace lab9
                         GetValue = GetCoordinates;
                         break;
                 }
-                if (IsDouble(textBox.Text, out currentResult) && IsApproximatelyEqual(currentResult, GetValue(timeStart + timeStep * (index++ % 3))))
+                if (IsDouble(textBox.Text, out currentResult) && IsApproximatelyEqual(currentResult, GetValue(timeStart + timeStep * (index % 3))))
                 {
                     textBox.BackColor = Color.LightGreen;
                 }
@@ -370,6 +370,7 @@ namespace lab9
                 {
                     textBox.BackColor = Color.Red;
                 }
+                index++;
             }
         }
 
